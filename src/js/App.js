@@ -1,16 +1,14 @@
-import React from 'react'
-import reactLogo from '../images/react-logo.png'
+class App {
+  constructor() {
+    this.app = document.getElementById("app");
+    this.renderText();
+  }
 
-class App extends React.Component {
-    render() {
-        return (
-            <div>
-                <img src={reactLogo}/>
-                <h1>Hello World!</h1>
-                <div className="tesla"/>
-            </div>
-        );
-    }
+  renderText() {
+    const $h1 = document.createElement("h1");
+    $h1.innerText = "Hello World!";
+    this.app.appendChild($h1);
+  }
 }
 
-export default App
+export default App;
